@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #cfd1e1;
+    overflow: hidden;
+}
+
+.heading{
+    font-family:  arial,sans-serif;
+    /* letter-spacing: 0.2em; */
+    position: absolute;
+    bottom: 55%;
+    right: 50%;
+    font-size: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(50%, -50%);
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    2px 3px 1px #919191,
+    3px 4px 1px #919191,
+    3px 5px 1px #919191,
+    3px 6px 1px #919191,
+    3px 6px 1px #919191,
+    3px 6px 1px #919191,
+    3px 6px 1px #919191,
+    3px 6px 1px #919191,
+    3px 14px 6px rgba(48, 47, 47, 0.4),
+    3px 16px 10px rgba(48, 47, 47, 0.4),
+    3px 18px 35px rgba(48, 47, 47, 0.4),
+    3px 25px 60px rgba(48, 47, 47, 0.4);
+
+}
+p{
+position: absolute;
+top: 250px;
+left: 45%;
+font-size: 2rem;
+color: teal;
+font-weight: 700;
+}
+.searchbox{
+
+    position: relative;
+    width: 65px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.searchbox:hover{
+    width: 500px;
+
+}
+
+.searchbox::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(#fff,#fff,#e3e3e3);
+    z-index: 1;
+    filter: blur(1px);
+}
+
+.searchbox::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 10px;
+    height: 100%;
+    background: #9d9d9d;
+    z-index: 1;
+    filter: blur(1px);
+}
+
+.shadow{
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: calc(100% + 50px);
+    height: 300px;
+    background:linear-gradient(180deg,rgb(0,0,0,0.1),
+     transparent,transparent ) ;
+    transform-origin: top;
+    transform: skew(45deg);
+    pointer-events: none;
+}
+.shadow::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #cfd1e1;
+    z-index: 1;
+}
+
+.searchbox input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px 25px;
+    outline: none;
+    font-size: 1.1em;
+    color: #555;
+     background: linear-gradient(#dbdae1, #a3aaba);
+    box-shadow: 5px 5px 5px rgb(0,0,0,0.1),
+    15px 15px 15px rgb(0,0,0,0.1),
+    20px 20px 15px rgb(0,0,0,0.1),
+    30px 30px 15px rgb(0,0,0,0.1),
+    inset 1px 1px 2px #fff; 
+}
+
+.searchbox input::placeholder,
+.searchbox input
+{
+    color: transparent;
+}
+
+.searchbox:hover input::placeholder,
+.searchbox input
+{
+color: #555;
+}
+.mg{
+    position: absolute;
+    right: 20px;
+    color: #555;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.gb{
+    position: absolute;
+    bottom: 172%;
+    left: 219%;
+    height: 25px;
+    width: 25px;
+    fill:rgba(16,16,16,0.4);
+    cursor: pointer;
+   
+}
+
+.img{
+    font-family:  arial,sans-serif;
+    position: absolute;
+    cursor: pointer;
+    bottom: 166%;
+    left: 191%;
+    font-size: 17px;
+    transform: translate(50%, -50%);
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 6px rgba(16,16,16,0.4),
+    2px 1px 10px rgba(16,16,16,0.2),
+    2px 1px 35px rgba(16,16,16,0.2),
+    2px 1px 60px rgba(16,16,16,0.4);   
+}
+
+.img:hover{
+    text-decoration: underline;
+}
+
+.mail{
+    font-family:  arial,sans-serif;
+    position: absolute;
+    /* bottom: 300%; */
+    cursor: pointer;
+    margin-top: -373px;
+    left: 180%;
+    font-size: 17px;
+    font-weight: lighter;
+    /* transform: translate(50%, -50%); */
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+    1px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 1px #6d6c6c,
+    2px 1px 6px rgba(16,16,16,0.4),
+    2px 1px 10px rgba(16,16,16,0.2),
+    2px 1px 35px rgba(16,16,16,0.2),
+    2px 1px 60px rgba(16,16,16,0.4);   
+}
+
+.mail:hover{
+    text-decoration: underline;
+}
+
+.gbimg{
+    position: absolute;
+    left: 97%;
+    bottom: 94%;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.customization{
+    cursor: pointer;
+    position: absolute;
+    left: 230%;
+    top: 420%;
+    height: 25px;
+    width: 25px;
+    margin: 10px 10px;
+
+}
+
+.customization:hover{
+    border-radius: 20px;
+    background-color: rgba(78, 77, 77, 0.432);
+
+}
+
+ .g:hover{
+ color: rgba(122, 195, 255, 0.89);
+transition: 1s;
+
+}
+.O:hover{
+ color: rgb(252, 84, 84);
+ transition: 1s;
+}
+
+.O1:hover{
+ color: rgba(255, 183, 74, 0.89);
+ transition: 1s;
+}
+.g1:hover{
+    color: rgba(122, 195, 255, 0.89);
+    transition: 1s;
+}
+
+.L:hover{
+ color: rgba(181, 255, 96, 0.89);
+ transition: 1s;
+}
+.E:hover{
+    color: rgb(252, 84, 84);
+    transition: 1s;
+} 
+.img1{
+    position: absolute;
+    top: 60%;
+    right: 58%;
+    cursor: pointer;
+    padding: 4px;
+    height: 50px;
+    width: 60px;
+    transition: 0.5s;
+background-color: rgba(255, 255, 255, 0.459);
+border-radius: 10px;
+
+transition: 0.5s;
+}
+.img1:hover{
+    background-color: rgba(248, 54, 54, 0.363);
+    border-radius: 0px;
+    transform: scale(2);
+   
+    
+}
+.img2{
+    position: absolute;
+    cursor: pointer;
+    top: 60%;
+    left: 60%;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    transition: 0.5s;
+background-color: rgba(255, 255, 255, 0.459);
+border-radius: 10px;
+   
+}
+.img2:hover{
+    background-color: rgba(234, 80, 248, 0.363);
+    border-radius: 0px;
+    transform: scale(2);
+    
+   
+}
+.img3{
+    position: absolute;
+    top: 60%;
+    cursor: pointer;
+    left: 48.5%;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    transition: 0.5s;
+background-color: rgba(255, 255, 255, 0.459);
+border-radius: 10px;
+   
+}
+.img3:hover{
+    background-color: rgba(59, 59, 59, 0.363);
+    border-radius: 0px;
+    transform: scale(2);
+    
+   
+}
+.img4{
+    position: absolute;
+    cursor: pointer;
+    top: 76%;
+   right: 58%;
+    padding: 16px;
+    height: 50px;
+    width: 60px;
+    transition: 0.5s;
+background-color: rgba(255, 255, 255, 0.459);
+border-radius: 10px;
+   
+}
+.img4:hover{
+    background-color: rgba(34, 33, 33, 0.363);
+    border-radius: 0px;
+    transform: scale(2);
+    
+}
+.img5{
+    position: absolute;
+    top: 76%;
+    cursor: pointer;
+    left: 60%;
+    padding: 12px;
+    height: 50px;
+    width: 50px;
+    transition: 0.5s;
+background-color: rgba(255, 255, 255, 0.459);
+border-radius: 10px;
+}
+.img5:hover{
+    background-color: rgba(34, 161, 247, 0.363);
+    border-radius: 0px;
+    transform: scale(2);
+}
+.img6{
+    position: absolute;
+    top: 76%;
+    cursor: pointer;
+    left: 48.5%;
+    padding: 11px;
+    height: 50px;
+    width: 50px;
+    transition: 0.5s;
+background-color: rgba(255, 255, 255, 0.459);
+border-radius: 10px;
+}
+.img6:hover{
+    background-color: rgba(30, 241, 76, 0.363);
+    border-radius: 0px;
+    transform: scale(2);
+}
+.bimg1
+{
+    position: absolute;
+    top: 56.1%;
+    right: 55%;
+    z-index: -1;
+    background: linear-gradient(to right top, rgba(92, 91, 91, 0.212),rgba(197, 197, 197, 0.568)) ;
+    padding: 56px 50px;
+    visibility: hidden;
+}
